@@ -6,9 +6,9 @@ This is a simple Windows desktop app that turns your photo(s) into a PDF(s) and 
 
 <div align="center">
 
-![](https://imgur.com/HF2Iufb.png)
-
 ![](https://imgur.com/YfSs9at.png)
+
+![](https://imgur.com/HF2Iufb.png)
 
 </div>
 
