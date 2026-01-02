@@ -1,10 +1,12 @@
-# Photo(s) to Ultra-High Quality PDF
+# Ultra-High Quality Converter; Photo(s) to PDF(s) && PDF(s) to Photo(s)
 
-This is a simple Windows desktop app that turns your photo(s) into a PDF.
+This is a simple Windows desktop app that turns your photo(s) into a PDF(s) and PDF(s) into a photo(s).
 
 <div align="center">
 
-![](https://imgur.com/RHkQVO1.png)
+![](https://imgur.com/HF2Iufb.png)
+
+![](https://imgur.com/YfSs9at.png)
 
 </div>
 
@@ -21,7 +23,7 @@ It tries to keep your photos looking as good as possible.
 - A Windows PC
 - Python installed (if you can run the app, you already have it)
 - This project folder (the one that contains:
-  - `Photo Converter to PDF.py`
+  - `Converter-Photos to PDF_PDF to photos.py`
   - `requirements.txt`
   - zipped `venv.rar` file)
 
@@ -50,7 +52,7 @@ pip install -r requirements.txt
 3. Start the app:
 
 ```powershell
-python -u "Photo Converter to PDF.py"
+python -u "Converter-Photos to PDF_PDF to photos.py"
 ```
 
 ## How to use the app
@@ -82,6 +84,25 @@ python -u "Photo Converter to PDF.py"
 6. Click **Convert**
    - You will see progress with auto_dip value.
    - Click **Cancel** if you want to stop.
+
+## PDF → Photos (PDF pages to images)
+
+The app can also convert a PDF into photos (one image per page).
+
+1. Click **PDF → Photos…**
+2. Click **Add…** and choose one or more PDF files
+3. Choose an **Output folder**
+4. Pick **Render DPI** (300 recommended; 600 for extra sharp)
+5. Pick **Image format**:
+
+- `png` = lossless (bigger files)
+- `jpg` = smaller files (uses JPEG quality setting)
+
+6. Click **Convert**
+
+Output filenames look like:
+
+- `yourpdf_page_001.png`, `yourpdf_page_002.png`, ...
 
 ## Features (what every button/option really does)
 
@@ -224,6 +245,16 @@ Run:
 ```powershell
 pip install -r requirements.txt
 ```
+
+### 2b) “PDF → Photos says PDF engine not installed”
+
+Install dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
+
+(This installs `PyMuPDF`, which the PDF → Photos feature needs.)
 
 ### 3) “The PDF looks blurry”
 
