@@ -1,7 +1,5 @@
 # Ultra-High Quality Converter 
 
-## Photo/s to PDF/s && PDF/s to Photo/s
-
 This is a simple Windows desktop app that turns your photo(s) into a PDF(s) and PDF(s) into a photo(s).
 
 <div align="center">
@@ -25,7 +23,7 @@ It tries to keep your photos looking as good as possible.
 - A Windows PC
 - Python installed (if you can run the app, you already have it)
 - This project folder (the one that contains:
-  - `Converter-Photos to PDF_PDF to photos.py`
+  - `Photo-PDF-Bidirectional-Converter.py`
   - `requirements.txt`
   - zipped `venv.rar` file)
 
@@ -52,7 +50,7 @@ pip install -r requirements.txt
 3. Start the app:
 
 ```powershell
-python -u "Converter-Photos to PDF_PDF to photos.py"
+python -u "Photo-PDF-Bidirectional-Converter.py"
 ```
 
 ## How to use the app
