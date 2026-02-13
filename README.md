@@ -1,5 +1,17 @@
 # Ultra-High Quality Converter 
 
+<div align="right">
+
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+&nbsp;
+[![License](https://img.shields.io/github/license/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter)](https://github.com/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter/blob/main/LICENSE)
+&nbsp;
+[![Last commit](https://img.shields.io/github/last-commit/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter)](https://github.com/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter/commits)
+&nbsp;
+[![Issues](https://img.shields.io/github/issues/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter)](https://github.com/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter/issues)
+
+</div>
+
 This is a simple Windows desktop app that turns your photo(s) into a PDF(s) and PDF(s) into a photo(s).
 
 ---
