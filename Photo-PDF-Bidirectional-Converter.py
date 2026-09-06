@@ -1,5 +1,6 @@
 import os
 import queue
+import sys
 import threading
 import tempfile
 from dataclasses import dataclass
@@ -23,6 +24,28 @@ try:
     import img2pdf  # type: ignore
 except Exception:
     img2pdf = None
+
+
+APP_NAME = "Photo-PDF Bidirectional Converter"
+APP_VERSION = "1.0.0"
+
+
+def _app_resource_path(relative_name: str) -> Path:
+    # Works both when running from source and inside a PyInstaller bundle.
+    base = getattr(sys, "_MEIPASS", None)
+    if base:
+        return Path(base) / relative_name
+    return Path(__file__).resolve().parent / "assets" / relative_name
+
+
+def _apply_window_icon(window) -> None:
+    # Give the window a proper icon instead of the generic Tk feather.
+    try:
+        icon_path = _app_resource_path("icon.ico")
+        if icon_path.exists():
+            window.iconbitmap(str(icon_path))
+    except Exception:
+        pass
 
 
 SUPPORTED_IMAGE_EXTENSIONS = {
@@ -201,8 +224,9 @@ def _fit_rect_preserve_aspect(
 class ImageToPDFApp:
     def __init__(self, root: tk.Tk):
         self.root = root
-        self.root.title("Photo(s) to Ultra-High Quality PDF")
+        self.root.title(f"Photo(s) to Ultra-High Quality PDF - {APP_NAME} v{APP_VERSION}")
         self.root.minsize(760, 520)
+        _apply_window_icon(self.root)
 
         self._images: List[Path] = []
         self._worker_thread: Optional[threading.Thread] = None
@@ -1084,8 +1108,9 @@ class ImageToPDFApp:
 class PDFToPhotosWindow:
     def __init__(self, parent: tk.Tk):
         self.window = tk.Toplevel(parent)
-        self.window.title("PDF to Photos")
+        self.window.title(f"PDF to Photos - {APP_NAME} v{APP_VERSION}")
         self.window.minsize(720, 440)
+        _apply_window_icon(self.window)
 
         # Helps keep this window associated with the main app on Windows,
         # and makes focus behavior after file dialogs more predictable.

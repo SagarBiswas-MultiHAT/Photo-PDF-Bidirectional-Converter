@@ -6,6 +6,8 @@
 &nbsp;
 [![License](https://img.shields.io/github/license/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter)](https://github.com/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter/blob/main/LICENSE)
 &nbsp;
+[![Release](https://img.shields.io/github/v/release/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter?include_prereleases&sort=semver)](https://github.com/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter/releases/latest)
+&nbsp;
 [![Last commit](https://img.shields.io/github/last-commit/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter)](https://github.com/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter/commits)
 &nbsp;
 [![Issues](https://img.shields.io/github/issues/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter)](https://github.com/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter/issues)
@@ -26,6 +28,14 @@ This is a simple Windows desktop app that turns your photo(s) into a PDF(s) and 
 
 ---
 
+## Download (no Python needed)
+
+Grab the latest `Photo-PDF-Bidirectional-Converter-vX.Y.Z-win64-portable.exe` from the
+[Releases](https://github.com/SagarBiswas-MultiHAT/Photo-PDF-Bidirectional-Converter/releases/latest)
+page, double-click it, and you are ready to go. Nothing to install.
+
+Prefer running from source? Keep reading.
+
 Think of it like this:
 
 - You pick one or more photos.
@@ -40,8 +50,7 @@ It tries to keep your photos looking as good as possible.
 - Python installed (if you can run the app, you already have it)
 - This project folder (the one that contains:
   - `Photo-PDF-Bidirectional-Converter.py`
-  - `requirements.txt`
-  - zipped `venv.rar` file)
+  - `requirements.txt`)
 
 ## How to run it
 
