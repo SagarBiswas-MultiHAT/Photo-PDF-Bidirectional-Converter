@@ -78,6 +78,19 @@ pip install -r requirements.txt
 python -u "Photo-PDF-Bidirectional-Converter.py"
 ```
 
+### Build a Windows .exe
+
+If you want to package the app into a standalone Windows executable, run the following commands from the project folder:
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt pyinstaller
+python -m PyInstaller --noconfirm --onefile --windowed --name "Photo-PDF-Bidirectional-Converter-v1.0.0-win64-portable" --icon assets/icon.ico --add-data "assets/icon.ico;assets" "Photo-PDF-Bidirectional-Converter.py"
+```
+
+The generated executable will appear in the `dist` folder.
+
 ## How to use the app
 
 1. Click **Add…**
